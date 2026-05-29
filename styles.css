@@ -243,9 +243,17 @@ textarea {
 }
 
 @keyframes dotPulse {
-  0% { box-shadow: 0 0 0 0 rgba(25, 163, 74, 0.4); }
-  70% { box-shadow: 0 0 0 8px rgba(25, 163, 74, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(25, 163, 74, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(25, 163, 74, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(25, 163, 74, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(25, 163, 74, 0);
+  }
 }
 
 .hero h1 {
@@ -338,9 +346,17 @@ textarea {
 }
 
 @keyframes floatPhone {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .phone-shell.compact-phone {
@@ -470,6 +486,29 @@ textarea {
   font-weight: 610;
 }
 
+.video-head {
+  text-align: center;
+  margin: 0 auto 38px;
+}
+
+.video-head h2 {
+  font-size: clamp(28px, 4.2vw, 44px);
+  margin-top: 6px;
+}
+
+.video-head p {
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.video-tag {
+  background: #fff1f2;
+  color: #e11d48;
+  border-color: #ffe4e6;
+  padding-left: 14px;
+  padding-right: 16px;
+}
+
 .panel {
   background: var(--card);
   border: 1px solid var(--line);
@@ -482,7 +521,7 @@ textarea {
 
 .demo-layout {
   display: grid;
-  grid-template-columns: 0.88fr 1.12fr;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   align-items: start;
 }
@@ -578,8 +617,8 @@ textarea {
 /* Phone UI */
 
 .phone-shell {
-  width: min(430px, 100%);
-  border-radius: 48px;
+  width: min(400px, 100%);
+  border-radius: 46px;
   background:
     linear-gradient(145deg, #0b1f3a, #061324);
   padding: 12px;
@@ -589,14 +628,20 @@ textarea {
 }
 
 .phone-screen {
-  min-height: 760px;
-  border-radius: 38px;
+  height: 845px;
+  border-radius: 36px;
   background:
     radial-gradient(circle at top left, rgba(86, 215, 255, 0.22), transparent 38%),
     linear-gradient(180deg, #f9fcff 0%, #eef8ff 100%);
-  overflow: hidden;
+  overflow-y: auto;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.28);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.phone-screen::-webkit-scrollbar {
+  display: none;
 }
 
 .phone-status {
@@ -725,7 +770,7 @@ textarea {
   margin-bottom: 12px;
 }
 
-.analysis-title > span {
+.analysis-title>span {
   width: 42px;
   height: 42px;
   border-radius: 15px;
@@ -1093,77 +1138,93 @@ textarea {
 
 .access-card {
   position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 28px;
-  padding: 22px;
-  box-shadow: var(--shadow-soft);
+  border-top-width: 4px;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(12, 26, 44, 0.03);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .access-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 32px rgba(12, 26, 44, 0.08);
 }
 
 .access-card .btn {
   margin-top: auto;
 }
 
-.access-card > span {
+/* Default tag styling for all cards (Slate/Gray for secondary cards) */
+.access-card>span {
   display: inline-grid;
   place-items: center;
   width: 40px;
   height: 40px;
-  border-radius: 15px;
-  color: var(--blue-deep);
-  background: #eaf6ff;
+  border-radius: 12px;
+  color: #64748b;
+  background: #f8fafc;
   font-weight: 950;
   margin-bottom: 16px;
 }
 
-.primary-access {
-  background:
-    radial-gradient(circle at top right, rgba(86, 215, 255, 0.28), transparent 38%),
-    var(--white);
+/* Primary Card (Web Demo) Accent */
+.access-card.primary-access {
+  border-top-color: var(--blue);
+}
+.access-card.primary-access>span {
+  color: var(--blue-deep);
+  background: #eaf6ff;
 }
 
-.dashboard-access {
-  background: #07172c;
+/* Secondary Card (Dashboard) Accent */
+.access-card.dashboard-access {
+  border-top-color: var(--navy);
+}
+.access-card.dashboard-access>span {
   color: var(--white);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: var(--navy);
 }
 
-.dashboard-access h3 {
+/* GitHub Card Accent */
+.access-card.github-access {
+  border-top-color: #6366f1;
+}
+.access-card.github-access>span {
+  color: #4f46e5;
+  background: #e0e7ff;
+}
+.btn-github {
+  background: #eef2ff;
+  color: #4338ca;
+  border-color: #c7d2fe;
+}
+.btn-github:hover {
+  background: #4f46e5;
   color: var(--white);
+  border-color: #4f46e5;
 }
 
-.dashboard-access p {
-  color: #c7d8ea;
+/* APK Card Accent */
+.access-card.apk-access {
+  border-top-color: #10b981;
 }
-
-.dashboard-access > span {
-  background: rgba(86, 215, 255, 0.13);
-  color: #bae6fd;
+.access-card.apk-access>span {
+  color: #059669;
+  background: #d1fae5;
 }
-
-.dashboard-access .code-chip {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+.btn-apk {
+  background: #ecfdf5;
+  color: #047857;
+  border-color: #a7f3d0;
 }
-
-.dashboard-access .copy-btn {
-  background: rgba(255, 255, 255, 0.12);
+.btn-apk:hover {
+  background: #10b981;
   color: var(--white);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.dashboard-access .copy-btn:hover {
-  background: var(--blue);
-  border-color: var(--blue);
+  border-color: #10b981;
 }
 
 .access-card h3 {
@@ -1362,7 +1423,9 @@ textarea {
 .modern-textarea::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 40px;
   background: linear-gradient(180deg, rgba(4, 13, 26, 0.9), transparent);
   border-radius: 18px 18px 0 0;
@@ -1406,6 +1469,18 @@ textarea {
   font-weight: 650;
   max-width: 400px;
   line-height: 1.5;
+}
+
+.footer .team-credit {
+  color: #bae6fd;
+  font-weight: 760;
+  font-size: 15px;
+  margin-top: 2px;
+  max-width: 100%;
+}
+
+.footer .team-credit strong {
+  color: var(--white);
 }
 
 .footer-links {
@@ -1554,6 +1629,7 @@ textarea {
 /* Responsive */
 
 @media (max-width: 1040px) {
+
   .hero-grid,
   .demo-layout {
     grid-template-columns: 1fr;
