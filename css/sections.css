@@ -142,11 +142,11 @@
 }
 
 .phone-shell.compact-phone {
-  width: 350px;
+  width: 380px;
 }
 
 .hero-phone-screen {
-  min-height: 600px;
+  height: 680px;
   display: flex;
   flex-direction: column;
   align-items: center;
