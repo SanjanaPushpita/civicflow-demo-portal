@@ -257,6 +257,8 @@
 }
 
 .showcase-image {
+  position: relative;
+  cursor: crosshair;
   background: radial-gradient(circle at top, rgba(13, 125, 242, 0.08), transparent 60%), #e8f4fd;
   padding: 16px;
   border-bottom: 1px solid var(--line);
