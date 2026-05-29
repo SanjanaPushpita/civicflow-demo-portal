@@ -83,3 +83,52 @@ window.addEventListener('scroll', () => {
   }
   lastScrollY = window.scrollY;
 }, { passive: true });
+
+// E-commerce Image Zoom Logic
+function initImageZoom() {
+  const showcaseImages = document.querySelectorAll('.showcase-image');
+  
+  showcaseImages.forEach(container => {
+    const img = container.querySelector('img');
+    if (!img) return;
+
+    // Create the lens dynamically
+    const lens = document.createElement('div');
+    lens.classList.add('zoom-lens');
+    container.appendChild(lens);
+
+    // Set zoom multiplier (2x zoom)
+    const zoomLevel = 2;
+
+    container.addEventListener('mousemove', (e) => {
+      // Ensure background image is set (in case image loaded slowly)
+      if (!lens.style.backgroundImage) {
+        lens.style.backgroundImage = `url('${img.src}')`;
+      }
+
+      const rect = img.getBoundingClientRect();
+      
+      // Calculate mouse position relative to the image
+      let x = e.clientX - rect.left;
+      let y = e.clientY - rect.top;
+      
+      // Constrain inside image bounds
+      x = Math.max(0, Math.min(x, rect.width));
+      y = Math.max(0, Math.min(y, rect.height));
+
+      // Calculate the background position percentage
+      const xPercent = (x / rect.width) * 100;
+      const yPercent = (y / rect.height) * 100;
+
+      // Move the lens (add img offset to account for container padding)
+      lens.style.left = `${x + img.offsetLeft}px`;
+      lens.style.top = `${y + img.offsetTop}px`;
+      
+      // Scale up the background image and position it
+      lens.style.backgroundSize = `${rect.width * zoomLevel}px ${rect.height * zoomLevel}px`;
+      lens.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+    });
+  });
+}
+
+initImageZoom();
