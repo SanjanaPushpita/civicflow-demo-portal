@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CivicFlow AI — Interactive Web Demo</title>
+  <title>CivicFlow AI by Dreams of Bangladesh - Web Demo</title>
 
-  <meta
-    name="description"
-    content="CivicFlow AI is a Bangla, English, and Banglish voice-first civic safety assistant for Bangladesh."
-  />
+  <meta name="description"
+    content="CivicFlow AI is a Bangla, English, and Banglish voice-first civic safety assistant for Bangladesh." />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <meta name="theme-color" content="#0d7df2" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body>
@@ -24,7 +30,7 @@
           </span>
           <span>
             CivicFlow AI
-            <small>NagrikAI Web Demo</small>
+            <small>CivicFlow AI Web Demo</small>
           </span>
         </a>
 
@@ -41,9 +47,10 @@
     <header class="hero" id="top">
       <div class="container hero-grid">
         <section class="hero-copy">
-          <div class="eyebrow">
-            <!-- <span class="pulse-dot"></span> -->
-            Bangladesh Civic Safety AI • Interactive Web Demo
+          <div class="eyebrow-minimal">
+            <span class="brand-text">CivicFlow AI</span>
+            <span class="divider"></span>
+            <span class="team-text">By Team Dreams of Bangladesh</span>
           </div>
 
           <h1>
@@ -96,7 +103,11 @@
                 <p>Tap the microphone and speak naturally about any civic issue.</p>
 
                 <div class="hero-mic">
-                  <span>🎙️</span>
+                  <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                      </path>
+                    </svg></span>
                 </div>
 
                 <div class="hero-mini-card">
@@ -137,23 +148,35 @@
 
               <div class="command-list">
                 <button class="command active" data-scenario="rab">
-                  <span class="command-icon">🛡️</span>
+                  <span class="command-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg></span>
                   <span>
                     <strong>র‍্যাবের নম্বর দাও</strong>
-                    <small>Direct contact lookup — no GPS report</small>
+                    <small>Direct contact lookup - no GPS report</small>
                   </span>
                 </button>
 
                 <button class="command" data-scenario="blood">
-                  <span class="command-icon">🩸</span>
+                  <span class="command-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 21.5c-3 0-6-2.5-6-6.5 0-3.5 3-6.5 6-10.5 3 4 6 7 6 10.5 0 4-3 6.5-6 6.5z"></path>
+                    </svg></span>
                   <span>
                     <strong>ব্লাড ব্যাংকের নম্বর দাও</strong>
-                    <small>Blood bank matching — contact only</small>
+                    <small>Blood bank matching - contact only</small>
                   </span>
                 </button>
 
                 <button class="command" data-scenario="desco">
-                  <span class="command-icon">⚡</span>
+                  <span class="command-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                    </svg></span>
                   <span>
                     <strong>ডেসকো নম্বর দাও</strong>
                     <small>Utility helpline lookup</small>
@@ -161,7 +184,11 @@
                 </button>
 
                 <button class="command danger" data-scenario="emergency">
-                  <span class="command-icon">🚨</span>
+                  <span class="command-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg></span>
                   <span>
                     <strong>আমি বিপদে আছি, সাহায্য লাগবে</strong>
                     <small>Emergency auto-submit + GPS + tracking</small>
@@ -169,7 +196,12 @@
                 </button>
 
                 <button class="command" data-scenario="ambulance">
-                  <span class="command-icon">🚑</span>
+                  <span class="command-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.5 16.5c-1.5 0-3-1-3-2.5V8c0-1.5 1-3 2.5-3h9c1.5 0 2.5 1 2.5 2.5v3h3.5c1.5 0 2.5 1 2.5 2.5v3.5c0 1.5-1 2.5-2.5 2.5H19M7.5 16.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zm9 0a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM15 10h4l1.5 2.5H15V10z">
+                      </path>
+                    </svg></span>
                   <span>
                     <strong>আমার অ্যাম্বুলেন্স লাগবে</strong>
                     <small>Medical emergency support</small>
@@ -177,7 +209,13 @@
                 </button>
 
                 <button class="command" data-scenario="risk">
-                  <span class="command-icon">📍</span>
+                  <span class="command-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg></span>
                   <span>
                     <strong>আমি ঝুঁকিপূর্ণ এলাকায় আছি কিনা দেখাও</strong>
                     <small>Risk-zone safety check</small>
@@ -203,14 +241,23 @@
                   </div>
 
                   <div class="voice-card">
-                    <div class="mic-button">🎙️</div>
+                    <div class="mic-button"><svg width="24" height="24" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                        </path>
+                      </svg></div>
                     <h3 id="phoneHeadline">Direct contact request detected</h3>
                     <p id="phoneSubline">No report submission needed</p>
                   </div>
 
                   <div class="analysis-card">
                     <div class="analysis-title">
-                      <span>🧠</span>
+                      <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                          </path>
+                        </svg></span>
                       <div>
                         <strong>AI Understanding</strong>
                         <small id="transcript">“র‍্যাবের নম্বর দাও”</small>
@@ -264,14 +311,48 @@
                   </div>
 
                   <div class="bottom-nav">
-                    <span><b>🏠</b>Home</span>
-                    <span><b>☎️</b>Help</span>
-                    <span><b>🕘</b>History</span>
-                    <span><b>🛡️</b>Safety</span>
+                    <span><b><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                          </path>
+                        </svg></b>Home</span>
+                    <span><b><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                          </path>
+                        </svg></b>Help</span>
+                    <span><b><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg></b>History</span>
+                    <span><b><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg></b>Safety</span>
                   </div>
                 </div>
               </div>
             </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="video">
+        <div class="container">
+          <div class="section-head video-head">
+            <span class="section-tag video-tag">▶ 180-Second Pitch Video</span>
+            <h2>CivicFlow AI in Action</h2>
+            <p>
+              A rapid, 3-minute overview covering the problem, our voice-first solution, and a live demonstration of the
+              app's workflow.
+            </p>
+          </div>
+          <div class="video-box iframe-container">
+            <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0" title="CivicFlow AI Pitch Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
       </section>
@@ -291,7 +372,8 @@
           <div class="showcase-grid">
             <article class="showcase-card dashboard-card">
               <div class="showcase-image dashboard-image">
-                <img src="assets/Dashboard.png" alt="CivicFlow AI protected backend dashboard showing submitted reports" />
+                <img src="assets/Dashboard.png"
+                  alt="CivicFlow AI protected backend dashboard showing submitted reports" />
               </div>
 
               <div class="showcase-content">
@@ -365,7 +447,8 @@
 
               <div class="showcase-content">
                 <span class="card-kicker">Helpline & Area Recommendation</span>
-                <h3>Category-based help for gas, electricity, water, ambulance, blood bank, and cyber/fraud support.</h3>
+                <h3>Category-based help for gas, electricity, water, ambulance, blood bank, and cyber/fraud support.
+                </h3>
 
                 <p>
                   This screen lets users find national and regional emergency contacts without scrolling through a
@@ -398,7 +481,8 @@
                 <p>
                   The risk-zone warning screen explains the risky area, district, possible safety concerns,
                   and recommended precautions in Bangla. This feature is important because civic safety is not only
-                  about reporting after something happens; it can also warn users before they stay too long in a risky place.
+                  about reporting after something happens; it can also warn users before they stay too long in a risky
+                  place.
                 </p>
 
                 <p>
@@ -419,7 +503,8 @@
 
                 <p>
                   The Safety Monitor lets users turn on risk-zone checking while the app is running.
-                  Users can also tap “Check Now” to immediately check whether their current location matches a known hotspot.
+                  Users can also tap “Check Now” to immediately check whether their current location matches a known
+                  hotspot.
                 </p>
 
                 <p>
@@ -446,7 +531,8 @@
 
                 <p>
                   The CivicFlow AI icon combines a shield, microphone, and location marker. The shield represents
-                  public safety, the microphone represents voice-first AI interaction, and the location marker represents
+                  public safety, the microphone represents voice-first AI interaction, and the location marker
+                  represents
                   GPS-based reporting and risk-zone awareness.
                 </p>
 
@@ -476,17 +562,22 @@
               <span>01</span>
               <h3>Interactive Web Demo</h3>
               <p>This Vercel page is the main live submission link.</p>
-              <a class="btn btn-primary" href="https://civicflow-demo-portal.vercel.app/" target="_blank" rel="noreferrer">
+              <a class="btn btn-primary" href="https://civicflow-demo-portal.vercel.app/" target="_blank"
+                rel="noreferrer">
                 Open Web Demo
               </a>
             </article>
 
-            <article class="access-card">
+            <article class="access-card dashboard-access">
               <span>02</span>
               <h3>Protected Dashboard</h3>
               <p>Shows reports, GPS location, citizen identity, status updates, and live tracking records.</p>
-              <div class="code-chip">Password: print('CivicFlow_AI')</div>
-              <a class="btn btn-dark" href="https://civicflow-ai-backend.onrender.com/dashboard/reports" target="_blank" rel="noreferrer">
+              <div class="password-row">
+                <div class="code-chip">Password: <span id="dashPassword">print('CivicFlow_AI')</span></div>
+                <button class="copy-btn" id="copyPasswordBtn" type="button" aria-label="Copy Password">Copy</button>
+              </div>
+              <a class="btn btn-primary" href="https://civicflow-ai-backend.onrender.com/dashboard/reports"
+                target="_blank" rel="noreferrer">
                 Open Dashboard
               </a>
             </article>
@@ -495,7 +586,8 @@
               <span>03</span>
               <h3>GitHub Repository</h3>
               <p>Source code for the CivicFlow AI Flutter project.</p>
-              <a class="btn btn-soft" href="https://github.com/SanjanaPushpita/civicflow-ai" target="_blank" rel="noreferrer">
+              <a class="btn btn-soft" href="https://github.com/SanjanaPushpita/civicflow-ai" target="_blank"
+                rel="noreferrer">
                 View GitHub
               </a>
             </article>
@@ -525,31 +617,50 @@
 
           <div class="architecture-grid">
             <div class="arch-step">
-              <span>🎙️</span>
+              <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                  </path>
+                </svg></span>
               <strong>Voice Input</strong>
               <small>Bangla, English, or Banglish spoken report</small>
             </div>
 
             <div class="arch-step">
-              <span>🧠</span>
+              <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                  </path>
+                </svg></span>
               <strong>Gemini AI</strong>
               <small>Intent and issue understanding</small>
             </div>
 
             <div class="arch-step">
-              <span>📚</span>
+              <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                  </path>
+                </svg></span>
               <strong>Civic Directory</strong>
               <small>Helpline, contact, blood bank, and risk-zone data</small>
             </div>
 
             <div class="arch-step">
-              <span>🛡️</span>
+              <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg></span>
               <strong>Safety Rules</strong>
               <small>Decides when GPS/reporting is allowed</small>
             </div>
 
             <div class="arch-step">
-              <span>📊</span>
+              <span><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                  </path>
+                </svg></span>
               <strong>Dashboard</strong>
               <small>Report review, status, and live tracking</small>
             </div>
@@ -563,40 +674,70 @@
         </div>
       </section>
 
-      <section class="section" id="video">
-        <div class="container">
-          <div class="video-box">
-            <div class="play-button">▶</div>
-            <h2>180-Second Pitch Video Coming Soon</h2>
-            <p>
-              Upload the final YouTube video as Public or Unlisted, then replace this placeholder with the YouTube link.
-              The video should show problem, solution, app workflow, AI approach, dashboard proof, and next steps.
-            </p>
-            <button class="btn btn-disabled" type="button">YouTube Link Not Added Yet</button>
-          </div>
-        </div>
-      </section>
 
       <section class="section" id="submission">
         <div class="container">
           <div class="submission-panel">
-            <h2>Competition access note</h2>
-            <p>Copy this into the submission form if they ask how to access the live demo.</p>
+            <div class="submission-header">
+              <div class="submission-title">
+                <span class="submission-icon"><svg width="24" height="24" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                  </svg></span>
+                <div>
+                  <h2>Competition Access Note</h2>
+                  <p>Copy this exact text into your hackathon submission form.</p>
+                </div>
+              </div>
+              <button class="copy-btn" id="copyNoteBtn" type="button" aria-label="Copy Note">Copy All</button>
+            </div>
 
-            <textarea readonly>This is the official CivicFlow AI interactive web demo. The real product is a Flutter Android mobile app, but this web demo mirrors the main app workflows for judging: Bangla/English/Banglish voice-to-action, helpline lookup, emergency report submission, GPS decision logic, emergency live tracking concept, risk-zone safety monitor, and protected dashboard review.
+            <div class="modern-textarea" id="submissionNote">This is the official CivicFlow AI interactive web demo. The
+              real product is a Flutter Android mobile app, but this web demo mirrors the main app workflows for
+              judging: Bangla/English/Banglish voice-to-action, helpline lookup, emergency report submission, GPS
+              decision logic, emergency live tracking concept, risk-zone safety monitor, and protected dashboard review.
 
-Dashboard link: https://civicflow-ai-backend.onrender.com/dashboard/reports
-Dashboard password: print('CivicFlow_AI')
+              Dashboard link: https://civicflow-ai-backend.onrender.com/dashboard/reports
+              Dashboard password: print('CivicFlow_AI')
 
-APK backup is also provided for Android testing if needed.</textarea>
+              APK backup is also provided for Android testing if needed.</div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="container">
-        CivicFlow AI — Bangla voice-first civic safety assistant for Bangladesh.
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-brand">
+              <img src="assets/icon.png" alt="CivicFlow AI" class="footer-icon" />
+              <span>CivicFlow AI</span>
+            </div>
+            <p>Bangla, English, and Banglish voice-first civic safety assistant for Bangladesh.</p>
+            <p class="team-credit">Proudly built by <strong>Team Dreams of Bangladesh</strong> for CloudCamp 2026.</p>
+          </div>
+
+          <div class="footer-nav">
+            <div class="footer-col">
+              <strong>Product</strong>
+              <a href="#demo">Try Demo</a>
+              <a href="#screens">Features</a>
+              <a href="#ai">AI Flow</a>
+            </div>
+            <div class="footer-col">
+              <strong>Resources</strong>
+              <a href="https://github.com/SanjanaPushpita/civicflow-ai" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a href="/app-arm64-v8a-release.apk" target="_blank">Download APK</a>
+              <a href="#video">Pitch Video</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Team Dreams of Bangladesh. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   </div>
@@ -636,6 +777,9 @@ APK backup is also provided for Android testing if needed.</textarea>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/simulator.js"></script>
+  <script src="js/utils.js"></script>
 </body>
+
 </html>
