@@ -2,7 +2,7 @@
   <img src="assets/icon.png" alt="CivicFlow AI Logo" width="120" />
   <h1>CivicFlow AI Web Demo</h1>
   <p><strong>A Bangla, English, and Banglish voice-first civic safety assistant for Bangladesh.</strong></p>
-  <p><i>Proudly built by <b>Team Dreams of Bangladesh</b> for the CloudCamp 2026 Hackathon</i></p>
+  <p><i>Proudly built by <b>Team Dreams of X</b> for the CloudCamp 2026 Hackathon</i></p>
 </div>
 
 <br />
@@ -84,5 +84,5 @@ To run it locally:
 ---
 
 <div align="center">
-  <p>&copy; 2026 Team Dreams of Bangladesh. All rights reserved.</p>
+  <p>&copy; 2026 Team Dreams of X. All rights reserved.</p>
 </div>
