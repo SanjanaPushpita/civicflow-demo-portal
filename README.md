@@ -1,4 +1,4 @@
-# CivicFlow AI  — Interactive Web Demo
+# CivicFlow AI  - Interactive Web Demo
 
 CivicFlow AI is a Bangla, English, and Banglish voice-first civic safety assistant for Bangladesh.
 
