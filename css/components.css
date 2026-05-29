@@ -417,7 +417,7 @@
 }
 
 .timeline {
-  margin: 12px 22px 86px;
+  margin: 12px 22px 24px;
   display: grid;
   gap: 9px;
 }
@@ -449,10 +449,9 @@
 }
 
 .bottom-nav {
-  position: absolute;
-  left: 22px;
-  right: 22px;
+  position: sticky;
   bottom: 14px;
+  margin: 0 22px 14px 22px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
@@ -461,6 +460,7 @@
   border-radius: 25px;
   padding: 9px;
   box-shadow: var(--shadow-soft);
+  z-index: 10;
 }
 
 .bottom-nav span {
